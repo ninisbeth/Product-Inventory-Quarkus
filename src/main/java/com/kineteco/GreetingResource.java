@@ -6,6 +6,8 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
+import java.math.BigDecimal;
+
 @Path("/products")
 public class GreetingResource {
 
@@ -22,6 +24,9 @@ public class GreetingResource {
         ProductInventory productInventory = new ProductInventory();
         productInventory.setSku("KE180");
         productInventory.setName("K-Eco 180");
+        //productInventory.setProductAvailability();
+        productInventory.setQuantity(12);
+        productInventory.setPrice(BigDecimal.valueOf(315.0));
         return productInventory;
     }
 }
